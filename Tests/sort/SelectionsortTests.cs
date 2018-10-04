@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using bubblesort;
 using csharp_algorithms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Selectionsort;
 
-namespace Tests
+namespace Tests.sort
 {
     [TestClass]
-    public class BubblesortTests
+    public class SelectionsortTests
     {
         [TestMethod]
         public void NormalSort()
@@ -18,16 +18,13 @@ namespace Tests
                 new Node(5),
                 new Node(1)
             };
-            BubbleSort b = new BubbleSort(list);
-
+            SelectionSort b = new SelectionSort(list);
             //Act
             List<Node> result = b.Sort().ToList();
-
             //Assert
             Assert.AreEqual(1, result.ElementAt(0).Number);
             Assert.AreEqual(5, result.ElementAt(1).Number);
         }
-
         [TestMethod]
         public void ReverseSort()
         {
@@ -37,15 +34,12 @@ namespace Tests
                 new Node(5),
                 new Node(1)
             };
-            BubbleSort b = new BubbleSort(list);
-
+            SelectionSort b = new SelectionSort(list);
             //Act
             List<Node> result = b.ReverseSort().ToList();
-
             //Assert
             Assert.AreEqual(1, result.ElementAt(0).Number);
             Assert.AreEqual(5, result.ElementAt(1).Number);
-
         }
     }
 }
