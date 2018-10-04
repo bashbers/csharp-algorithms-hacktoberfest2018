@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-algorithms", "csharp-algorithms\csharp-algorithms.csproj", "{3511528E-8696-40B8-85AB-97456347A497}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bubblesort", "bubblesort\bubblesort.csproj", "{C557EF5B-AEFE-407B-8D99-43B9EA625B71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{59D5FD7E-879A-455C-899C-A56C878CA948}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3511528E-8696-40B8-85AB-97456347A497}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3511528E-8696-40B8-85AB-97456347A497}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3511528E-8696-40B8-85AB-97456347A497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C557EF5B-AEFE-407B-8D99-43B9EA625B71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C557EF5B-AEFE-407B-8D99-43B9EA625B71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C557EF5B-AEFE-407B-8D99-43B9EA625B71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C557EF5B-AEFE-407B-8D99-43B9EA625B71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59D5FD7E-879A-455C-899C-A56C878CA948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D5FD7E-879A-455C-899C-A56C878CA948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D5FD7E-879A-455C-899C-A56C878CA948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D5FD7E-879A-455C-899C-A56C878CA948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
