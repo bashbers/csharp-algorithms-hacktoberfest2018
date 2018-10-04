@@ -4,7 +4,7 @@ using bubblesort;
 using csharp_algorithms;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Tests
+namespace Tests.sort
 {
     [TestClass]
     public class BubblesortTests
