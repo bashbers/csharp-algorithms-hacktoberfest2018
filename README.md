@@ -1,7 +1,7 @@
 # csharp-algorithms
 Repository which over time will include loads of C# algorithms.
 
-
+![Hacktoberfest 2018 logo](https://i.imgur.com/TRdON5V.png)
 
 ## Contribution
 
