@@ -1,0 +1,39 @@
+using System.Collections.Generic;
+
+using System.Linq;
+
+using csharp_algorithms;
+
+
+namespace LinearSearch
+{
+
+
+   public class LS
+    {
+          private readonly IEnumerable<Node> _list;
+
+        public BubbleSort(IEnumerable<Node> list)
+
+        {
+
+            this._list = list;
+
+        }
+        private int linear_search( int number )
+        {
+           for( int index = 0 ; index < _list.Count() ; index ++)
+           {
+               Node current = _list.ElementAt(index);
+               if (current.Number == number )
+               {
+                   return index ;
+               }
+           }
+           return ;
+        }
+        
+    
+      
+    }
+}
