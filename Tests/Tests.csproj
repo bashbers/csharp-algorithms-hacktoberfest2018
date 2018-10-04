@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="sort\BubblesortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sort\SelectionsortTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -63,6 +64,10 @@
     <ProjectReference Include="..\csharp-algorithms\csharp-algorithms.csproj">
       <Project>{3511528E-8696-40B8-85AB-97456347A497}</Project>
       <Name>csharp-algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\selectionsort\selectionsort.csproj">
+      <Project>{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}</Project>
+      <Name>selectionsort</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
