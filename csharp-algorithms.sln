@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-algorithms", "csharp-algorithms\csharp-algorithms.csproj", "{3511528E-8696-40B8-85AB-97456347A497}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "search", "search", "{F61757B3-8F9B-4A56-9800-CCD038241D81}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "selectionsort", "selectionsort\selectionsort.csproj", "{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MergeSort", "MergeSort\MergeSort.csproj", "{412DCFF1-B9F6-49E8-AF00-29DE59908A39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{412DCFF1-B9F6-49E8-AF00-29DE59908A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412DCFF1-B9F6-49E8-AF00-29DE59908A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412DCFF1-B9F6-49E8-AF00-29DE59908A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412DCFF1-B9F6-49E8-AF00-29DE59908A39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C557EF5B-AEFE-407B-8D99-43B9EA625B71} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
+		{412DCFF1-B9F6-49E8-AF00-29DE59908A39} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F2BFC66-A9D6-4C6D-A15A-984F23C11D29}
