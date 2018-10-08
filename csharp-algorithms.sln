@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "search", "search", "{F61757
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "selectionsort", "selectionsort\selectionsort.csproj", "{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linqsort", "linqsort\linqsort\linqsort.csproj", "{BE3D2AA4-419A-42C4-9704-7FC62717AE2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3D2AA4-419A-42C4-9704-7FC62717AE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE3D2AA4-419A-42C4-9704-7FC62717AE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE3D2AA4-419A-42C4-9704-7FC62717AE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE3D2AA4-419A-42C4-9704-7FC62717AE2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C557EF5B-AEFE-407B-8D99-43B9EA625B71} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
+		{BE3D2AA4-419A-42C4-9704-7FC62717AE2A} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F2BFC66-A9D6-4C6D-A15A-984F23C11D29}
