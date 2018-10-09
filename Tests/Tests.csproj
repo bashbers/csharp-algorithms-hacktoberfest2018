@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props" Condition="Exists('..\packages\MSTest.TestAdapter.1.3.2\build\net45\MSTest.TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FibonacciSearchTest.cs" />
     <Compile Include="sort\BubblesortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sort\SelectionsortTests.cs" />
@@ -64,6 +65,10 @@
     <ProjectReference Include="..\csharp-algorithms\csharp-algorithms.csproj">
       <Project>{3511528E-8696-40B8-85AB-97456347A497}</Project>
       <Name>csharp-algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fibonaccisearch\fibonaccisearch.csproj">
+      <Project>{92DB864E-DF8A-470C-9746-69B7C41AB80C}</Project>
+      <Name>fibonaccisearch</Name>
     </ProjectReference>
     <ProjectReference Include="..\selectionsort\selectionsort.csproj">
       <Project>{A9022928-E9E9-45BE-BFEC-85A1A870A7EB}</Project>
