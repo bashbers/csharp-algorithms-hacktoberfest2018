@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "selectionsort", "selections
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dijkstrasAlgorithm", "dijkstrasAlgorithm\dijkstrasAlgorithm.csproj", "{8087DFD2-673A-499F-B130-0FAE0F31EADC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knapsackproblem", "knapsackproblem\knapsackproblem.csproj", "{8870FC35-4386-43E5-B5EA-1C764E7ADC54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8870FC35-4386-43E5-B5EA-1C764E7ADC54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8870FC35-4386-43E5-B5EA-1C764E7ADC54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8870FC35-4386-43E5-B5EA-1C764E7ADC54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8870FC35-4386-43E5-B5EA-1C764E7ADC54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{C557EF5B-AEFE-407B-8D99-43B9EA625B71} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 		{A9022928-E9E9-45BE-BFEC-85A1A870A7EB} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC} = {05BBB622-53C5-4866-869B-B45978502CB5}
+		{8870FC35-4386-43E5-B5EA-1C764E7ADC54} = {05BBB622-53C5-4866-869B-B45978502CB5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F2BFC66-A9D6-4C6D-A15A-984F23C11D29}
