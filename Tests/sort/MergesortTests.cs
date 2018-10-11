@@ -23,6 +23,7 @@ namespace Tests.sort
             //Assert
             Assert.AreEqual(1, list.ElementAt(0).Number);
             Assert.AreEqual(5, list.ElementAt(1).Number);
+            Assert.AreNotEqual(1, list.ElementAt(0).Number);
         }
     }
 }
