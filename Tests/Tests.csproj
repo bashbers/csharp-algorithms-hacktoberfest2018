@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="sort\BogoSortTests.cs" />
     <Compile Include="greedy\DijkstrasAlgorithmTests.cs" />
     <Compile Include="greedy\KnapsackProblemTests.cs" />
     <Compile Include="sort\BubblesortTests.cs" />
@@ -59,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\bogosort\bogosort.csproj">
+      <Project>{a252ab24-4d26-426f-9d41-74270616638e}</Project>
+      <Name>bogosort</Name>
+    </ProjectReference>
     <ProjectReference Include="..\bubblesort\bubblesort.csproj">
       <Project>{c557ef5b-aefe-407b-8d99-43b9ea625b71}</Project>
       <Name>bubblesort</Name>
