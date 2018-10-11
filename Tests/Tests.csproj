@@ -54,6 +54,7 @@
     <Compile Include="greedy\KnapsackProblemTests.cs" />
     <Compile Include="sort\BubblesortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sort\InsertionsortTests.cs" />
     <Compile Include="sort\SelectionsortTests.cs" />
   </ItemGroup>
   <ItemGroup>
