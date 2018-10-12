@@ -34,7 +34,7 @@ namespace bellmanFordAlgorithm
         /// <summary>
         /// Set of vertices of the graph.
         /// </summary>
-        public ISet<string> Vertices
+        public IList<string> Vertices
         {
             get;
             private set;
@@ -43,7 +43,7 @@ namespace bellmanFordAlgorithm
         /// <summary>
         /// Set of edges of the graph.
         /// </summary>
-        public ISet<Edge> Edges
+        public IList<Edge> Edges
         {
             get;
             private set;
@@ -66,7 +66,7 @@ namespace bellmanFordAlgorithm
         /// <param name="vertices"></param>
         /// <param name="edges"></param>
         /// <param name="source"></param>
-        public Graph(ISet<string> vertices, ISet<Edge> edges, string source)
+        public Graph(IList<string> vertices, IList<Edge> edges, string source)
         {
             Vertices = vertices;
             Edges = edges;

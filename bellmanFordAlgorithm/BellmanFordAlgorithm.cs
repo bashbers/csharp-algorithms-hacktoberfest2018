@@ -60,7 +60,7 @@ namespace bellmanFordAlgorithm
         /// <param name="graph"></param>
         /// <param name="detectNegativeCycles"></param>
         /// <returns></returns>
-        public ShortestPaths Compute(Graph graph, bool detectNegativeCycles = false)
+        public static ShortestPaths Compute(Graph graph, bool detectNegativeCycles = false)
         {
             var g = graph;
             var distances = new Dictionary<string, int>();
