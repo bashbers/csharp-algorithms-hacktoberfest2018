@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="greedy\BellmanFordAlgorithmTests.cs" />
     <Compile Include="sort\BogoSortTests.cs" />
     <Compile Include="greedy\DijkstrasAlgorithmTests.cs" />
     <Compile Include="greedy\KnapsackProblemTests.cs" />
@@ -60,6 +61,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\bellmanFordAlgorithm\bellmanFordAlgorithm.csproj">
+      <Project>{6B79C9EC-0219-44AD-B399-CD4046718E66}</Project>
+      <Name>bellmanFordAlgorithm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\bogosort\bogosort.csproj">
       <Project>{a252ab24-4d26-426f-9d41-74270616638e}</Project>
       <Name>bogosort</Name>
