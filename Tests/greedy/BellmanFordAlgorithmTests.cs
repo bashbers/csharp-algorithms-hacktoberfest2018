@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using Path = System.Collections.Generic.List<bellmanFordAlgorithm.Graph.Edge>;
 using Edge = bellmanFordAlgorithm.Graph.Edge;
+using Predecessor = System.Collections.Generic.Dictionary<string, string>;
+using Distance = System.Collections.Generic.Dictionary<string, int>;
 
 namespace Tests.greedy
 {
@@ -19,13 +20,29 @@ namespace Tests.greedy
         {
             //Arrange
             var graph = CreateGraph1();
-            var expectedPaths = CreateShortestPaths1(graph);
+            var expected = CreateShortestPaths1(graph);
 
             //Act
-            var actualPaths = BellmanFordAlgorithm.Compute(graph);
+            var actual = BellmanFordAlgorithm.Compute(graph);
 
             //Assert
-            Assert.AreEqual(expectedPaths, actualPaths);
+            AssertAlgoResult(graph, expected, actual);
+        }
+
+        private void AssertAlgoResult(Graph graph, Tuple<Distance, Predecessor> expected, Tuple<Distance, Predecessor> actual)
+        {
+            foreach (var vertex in graph.Vertices)
+            {
+                int expectedDistance = expected.Item1[vertex];
+                int actualDistance = actual.Item1[vertex];
+                Assert.AreEqual(expectedDistance, actualDistance,
+                    $"Distance from source for vertex '{vertex}': Expected={expectedDistance} Actual={actualDistance}");
+
+                string expectedPred = expected.Item2[vertex];
+                string actualPred = actual.Item2[vertex];
+                Assert.AreEqual(expectedPred, actualPred,
+                    $"Predecessor for vertex '{vertex}': Expected='{expectedPred}' Actual='{actualPred}'");
+            }
         }
 
         private Graph CreateGraph1()
@@ -48,9 +65,9 @@ namespace Tests.greedy
             return new Graph(vertices, edges, "a");
         }
 
-        private BellmanFordAlgorithm.ShortestPaths CreateShortestPaths1(Graph graph)
+        private Tuple<Distance, Predecessor> CreateShortestPaths1(Graph graph)
         {
-            var distances = new Dictionary<string, int>()
+            var distances = new Distance()
             {
                 { "a", 0 },
                 { "b", 3 },
@@ -59,15 +76,16 @@ namespace Tests.greedy
                 { "e", 3 },
                 { "f", 4 }
             };
-            var paths = new Dictionary<string, Path>()
+            var predecessors = new Predecessor()
             {
-                { "b", new List<Edge>() { graph.Edges[1] } },
-                { "c", new List<Edge>() { graph.Edges[0] } },
-                { "d", new List<Edge>() { graph.Edges[0], graph.Edges[5], graph.Edges[6], graph.Edges[7] } },
-                { "e", new List<Edge>() { graph.Edges[0], graph.Edges[5] } },
-                { "f", new List<Edge>() { graph.Edges[0], graph.Edges[5], graph.Edges[6] } },
+                { "a", null },
+                { "b", "a" },
+                { "c", "a" },
+                { "d", "f" },
+                { "e", "c" },
+                { "f", "e" }
             };
-            return new BellmanFordAlgorithm.ShortestPaths(distances, paths);
+            return new Tuple<Distance, Predecessor>(distances, predecessors);
         }
     }
 }
