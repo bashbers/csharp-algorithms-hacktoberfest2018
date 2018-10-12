@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 
-using Path = System.Collections.Generic.List<bellmanFordAlgorithm.Graph.Edge>;
+using Predecessor = System.Collections.Generic.Dictionary<string, string>;
+using Distance = System.Collections.Generic.Dictionary<string, int>;
 
 namespace bellmanFordAlgorithm
 {
@@ -11,43 +11,6 @@ namespace bellmanFordAlgorithm
     /// </summary>
     public class BellmanFordAlgorithm
     {
-        #region Nested Classes
-        /// <summary>
-        /// Shortest paths in a weighted digraph;
-        /// </summary>
-        public class ShortestPaths
-        {
-            /// <summary>
-            /// Shortest distances from the source vertex for each of the vertices.
-            /// </summary>
-            public IDictionary<string, int> Distances
-            {
-                get;
-                private set;
-            }
-
-            /// <summary>
-            /// Shortes paths from the source vertex for each of the vertices.
-            /// </summary>
-            public IDictionary<string, Path> Paths
-            {
-                get;
-                private set;
-            }
-
-            /// <summary>
-            /// Creates an (empty) instance of the ShortestPaths.
-            /// </summary>
-            /// <param name="distances"></param>
-            /// <param name="paths"></param>
-            public ShortestPaths(IDictionary<string, int> distances, IDictionary<string, Path> paths)
-            {
-                Distances = distances;
-                Paths = paths;
-            }
-        } 
-        #endregion // Nested Classes
-        
         /// <summary>
         /// Represents logical infinity - distance to undiscovered vertices.
         /// </summary>
@@ -60,17 +23,18 @@ namespace bellmanFordAlgorithm
         /// <param name="graph"></param>
         /// <param name="detectNegativeCycles"></param>
         /// <returns></returns>
-        public static ShortestPaths Compute(Graph graph, bool detectNegativeCycles = false)
+        public static Tuple<Distance, Predecessor> Compute(Graph graph, bool detectNegativeCycles = false)
         {
             var g = graph;
-            var distances = new Dictionary<string, int>();
-            var paths = new Dictionary<string, Path>();
+            var distances = new Distance();
+            var predecessors = new Predecessor();
 
             foreach (var v in g.Vertices)
             {
                 distances[v] = Inf;
             }
             distances[g.Source] = 0;
+            predecessors[g.Source] = null;
 
             for (int i = 0; i < g.Vertices.Count - 1; i++)
             {
@@ -81,7 +45,7 @@ namespace bellmanFordAlgorithm
                     if (tmpDistance < distances[edge.Vertex2])
                     {
                         distances[edge.Vertex2] = tmpDistance;
-                        paths[edge.Vertex2].Add(edge);
+                        predecessors[edge.Vertex2] = edge.Vertex1;
                     }
                 }
             }
@@ -95,7 +59,7 @@ namespace bellmanFordAlgorithm
                 }
             }
 
-            return new ShortestPaths(distances, paths);
+            return new Tuple<Distance, Predecessor>(distances, predecessors);
         } 
         #endregion // Methods
     }
