@@ -2,9 +2,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 using Edge = bellmanFordAlgorithm.Graph.Edge;
 using Predecessor = System.Collections.Generic.Dictionary<string, string>;
@@ -15,6 +12,7 @@ namespace Tests.greedy
     [TestClass]
     public class BellmanFordAlgorithmTests
     {
+        #region Test Methods
         [TestMethod]
         public void PositiveWeightsGraph()
         {
@@ -29,8 +27,27 @@ namespace Tests.greedy
             AssertAlgoResult(graph, expected, actual);
         }
 
+        [TestMethod]
+        public void NegativeWeightsGraph()
+        {
+            //Arrange
+            var graph = CreateGraph2();
+            var expected = CreateShortestPaths2(graph);
+
+            //Act
+            var actual = BellmanFordAlgorithm.Compute(graph);
+
+            //Assert
+            AssertAlgoResult(graph, expected, actual);
+        } 
+        #endregion // Test Methods
+
+        #region Helper Methods
         private void AssertAlgoResult(Graph graph, Tuple<Distance, Predecessor> expected, Tuple<Distance, Predecessor> actual)
         {
+            Assert.AreEqual(expected.Item1.Count, actual.Item1.Count);
+            Assert.AreEqual(expected.Item2.Count, actual.Item2.Count);
+
             foreach (var vertex in graph.Vertices)
             {
                 int expectedDistance = expected.Item1[vertex];
@@ -87,5 +104,50 @@ namespace Tests.greedy
             };
             return new Tuple<Distance, Predecessor>(distances, predecessors);
         }
+
+        private Graph CreateGraph2()
+        {
+            var vertices = new List<string>()
+            {
+                "a", "b", "c", "d", "e", "f"
+            };
+            var edges = new List<Graph.Edge>()
+            {
+                new Edge { Vertex1 = "a", Vertex2 = "b", Weight = 10 },
+                new Edge { Vertex1 = "a", Vertex2 = "c", Weight = -20 },
+                new Edge { Vertex1 = "b", Vertex2 = "d", Weight = 50 },
+                new Edge { Vertex1 = "b", Vertex2 = "e", Weight = 10 },
+                new Edge { Vertex1 = "c", Vertex2 = "d", Weight = 20 },
+                new Edge { Vertex1 = "c", Vertex2 = "e", Weight = 33 },
+                new Edge { Vertex1 = "d", Vertex2 = "e", Weight = -20 },
+                new Edge { Vertex1 = "d", Vertex2 = "f", Weight = -2 },
+                new Edge { Vertex1 = "e", Vertex2 = "f", Weight = 1 },
+            };
+            return new Graph(vertices, edges, "a");
+        }
+
+        private Tuple<Distance, Predecessor> CreateShortestPaths2(Graph graph)
+        {
+            var distances = new Distance()
+            {
+                { "a", 0 },
+                { "b", 10 },
+                { "c", -20 },
+                { "d", 0 },
+                { "e", -20 },
+                { "f", -19 }
+            };
+            var predecessors = new Predecessor()
+            {
+                { "a", null },
+                { "b", "a" },
+                { "c", "a" },
+                { "d", "c" },
+                { "e", "d" },
+                { "f", "e" }
+            };
+            return new Tuple<Distance, Predecessor>(distances, predecessors);
+        }
+        #endregion // Helper Methods
     }
 }
