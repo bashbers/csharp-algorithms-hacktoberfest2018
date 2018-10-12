@@ -39,7 +39,17 @@ namespace Tests.greedy
 
             //Assert
             AssertAlgoResult(graph, expected, actual);
-        } 
+        }
+
+        [TestMethod]
+        public void NegativeCircleGraph()
+        {
+            //Arrange
+            var graph = CreateGraph3();
+
+            //Act + Assert
+            Assert.ThrowsException<ArgumentException>(() => BellmanFordAlgorithm.Compute(graph, true));
+        }
         #endregion // Test Methods
 
         #region Helper Methods
@@ -62,6 +72,10 @@ namespace Tests.greedy
             }
         }
 
+        /// <summary>
+        /// Creates graph with only postive edge weights.
+        /// </summary>
+        /// <returns></returns>
         private Graph CreateGraph1()
         {
             var vertices = new List<string>()
@@ -82,6 +96,11 @@ namespace Tests.greedy
             return new Graph(vertices, edges, "a");
         }
 
+        /// <summary>
+        /// Solution for the first graph.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns></returns>
         private Tuple<Distance, Predecessor> CreateShortestPaths1(Graph graph)
         {
             var distances = new Distance()
@@ -105,6 +124,10 @@ namespace Tests.greedy
             return new Tuple<Distance, Predecessor>(distances, predecessors);
         }
 
+        /// <summary>
+        /// Creates graph with negative edge weights as well (without negative circle).
+        /// </summary>
+        /// <returns></returns>
         private Graph CreateGraph2()
         {
             var vertices = new List<string>()
@@ -126,6 +149,11 @@ namespace Tests.greedy
             return new Graph(vertices, edges, "a");
         }
 
+        /// <summary>
+        /// Solution for the second graph.
+        /// </summary>
+        /// <param name="graph"></param>
+        /// <returns></returns>
         private Tuple<Distance, Predecessor> CreateShortestPaths2(Graph graph)
         {
             var distances = new Distance()
@@ -147,6 +175,28 @@ namespace Tests.greedy
                 { "f", "e" }
             };
             return new Tuple<Distance, Predecessor>(distances, predecessors);
+        }
+
+        /// <summary>
+        /// Creates graph with a negative circle (this graph has no solution, as the algorithm should throw).
+        /// </summary>
+        /// <returns></returns>
+        private Graph CreateGraph3()
+        {
+            var vertices = new List<string>()
+            {
+                "a", "b", "c", "d", "e", "f"
+            };
+            var edges = new List<Graph.Edge>()
+            {
+                new Edge { Vertex1 = "a", Vertex2 = "b", Weight = 10 },
+                new Edge { Vertex1 = "b", Vertex2 = "c", Weight = 1 },
+                new Edge { Vertex1 = "c", Vertex2 = "e", Weight = 3 },
+                new Edge { Vertex1 = "e", Vertex2 = "d", Weight = -10 },
+                new Edge { Vertex1 = "d", Vertex2 = "b", Weight = 4 },
+                new Edge { Vertex1 = "e", Vertex2 = "f", Weight = 22 }
+            };
+            return new Graph(vertices, edges, "a");
         }
         #endregion // Helper Methods
     }
