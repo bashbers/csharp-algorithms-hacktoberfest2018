@@ -55,6 +55,7 @@
     <Compile Include="greedy\KnapsackProblemTests.cs" />
     <Compile Include="sort\BubblesortTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sort\CountingSortTests.cs" />
     <Compile Include="sort\SelectionsortTests.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,6 +73,10 @@
     <ProjectReference Include="..\bubblesort\bubblesort.csproj">
       <Project>{c557ef5b-aefe-407b-8d99-43b9ea625b71}</Project>
       <Name>bubblesort</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\countingsort\countingsort.csproj">
+      <Project>{c9666973-0dd4-4cbb-bab7-c54a7299cc0b}</Project>
+      <Name>countingsort</Name>
     </ProjectReference>
     <ProjectReference Include="..\csharp-algorithms\csharp-algorithms.csproj">
       <Project>{3511528E-8696-40B8-85AB-97456347A497}</Project>
