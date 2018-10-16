@@ -59,6 +59,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FibonacciSearchTest.cs" />
     <Compile Include="search\JumpSearchTest.cs" />
     <Compile Include="search\LinearsearchTest.cs" />
     <Compile Include="search\InterpolationSearchTest.cs" />
@@ -96,6 +97,10 @@
     <ProjectReference Include="..\csharp-algorithms\csharp-algorithms.csproj">
       <Project>{3511528E-8696-40B8-85AB-97456347A497}</Project>
       <Name>csharp-algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\fibonaccisearch\fibonaccisearch.csproj">
+      <Project>{92DB864E-DF8A-470C-9746-69B7C41AB80C}</Project>
+      <Name>fibonaccisearch</Name>
     </ProjectReference>
     <ProjectReference Include="..\quicksort\quicksort.csproj">
       <Project>{9199c1cc-0966-40c9-8acc-7ab1baf6512a}</Project>
