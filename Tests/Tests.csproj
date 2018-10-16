@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="sort\QuickSortTests.cs" />
     <Compile Include="greedy\BellmanFordAlgorithmTests.cs" />
     <Compile Include="sort\BogoSortTests.cs" />
     <Compile Include="greedy\DijkstrasAlgorithmTests.cs" />
@@ -81,6 +82,10 @@
     <ProjectReference Include="..\csharp-algorithms\csharp-algorithms.csproj">
       <Project>{3511528E-8696-40B8-85AB-97456347A497}</Project>
       <Name>csharp-algorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\quicksort\quicksort.csproj">
+      <Project>{9199c1cc-0966-40c9-8acc-7ab1baf6512a}</Project>
+      <Name>quicksort</Name>
     </ProjectReference>
     <ProjectReference Include="..\dijkstrasAlgorithm\dijkstrasAlgorithm.csproj">
       <Project>{8087DFD2-673A-499F-B130-0FAE0F31EADC}</Project>
