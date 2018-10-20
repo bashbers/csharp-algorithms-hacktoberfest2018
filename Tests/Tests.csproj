@@ -48,7 +48,6 @@
     <Reference Include="linearsearch">
       <HintPath>..\linearsearch\bin\Debug\linearsearch.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -63,6 +62,7 @@
     <Compile Include="search\JumpSearchTest.cs" />
     <Compile Include="search\LinearsearchTest.cs" />
     <Compile Include="search\InterpolationSearchTest.cs" />
+    <Compile Include="sort\GnomeSortTest.cs" />
     <Compile Include="sort\QuickSortTests.cs" />
     <Compile Include="greedy\BellmanFordAlgorithmTests.cs" />
     <Compile Include="sort\BogoSortTests.cs" />
@@ -102,6 +102,10 @@
       <Project>{92DB864E-DF8A-470C-9746-69B7C41AB80C}</Project>
       <Name>fibonaccisearch</Name>
     </ProjectReference>
+    <ProjectReference Include="..\gnomesort\gnomesort.csproj">
+      <Project>{1593D8D2-1C16-4204-BCF3-FB79E1CE5ABC}</Project>
+      <Name>gnomesort</Name>
+    </ProjectReference>
     <ProjectReference Include="..\quicksort\quicksort.csproj">
       <Project>{9199c1cc-0966-40c9-8acc-7ab1baf6512a}</Project>
       <Name>quicksort</Name>
@@ -122,9 +126,6 @@
       <Project>{ceab3173-99c9-4f09-aee2-d31152d4270d}</Project>
       <Name>heapsort</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
