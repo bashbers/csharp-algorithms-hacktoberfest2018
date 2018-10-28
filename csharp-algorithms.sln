@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knapsackproblem", "knapsack
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bellmanFordAlgorithm", "bellmanFordAlgorithm\bellmanFordAlgorithm.csproj", "{6B79C9EC-0219-44AD-B399-CD4046718E66}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "binarysearch", "binarysearch\binarysearch.csproj", "{229B8895-F269-475D-8549-CF7FBA2E8169}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{229B8895-F269-475D-8549-CF7FBA2E8169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{229B8895-F269-475D-8549-CF7FBA2E8169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{229B8895-F269-475D-8549-CF7FBA2E8169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{229B8895-F269-475D-8549-CF7FBA2E8169}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC} = {05BBB622-53C5-4866-869B-B45978502CB5}
 		{8870FC35-4386-43E5-B5EA-1C764E7ADC54} = {05BBB622-53C5-4866-869B-B45978502CB5}
 		{6B79C9EC-0219-44AD-B399-CD4046718E66} = {05BBB622-53C5-4866-869B-B45978502CB5}
+		{229B8895-F269-475D-8549-CF7FBA2E8169} = {F61757B3-8F9B-4A56-9800-CCD038241D81}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F2BFC66-A9D6-4C6D-A15A-984F23C11D29}
