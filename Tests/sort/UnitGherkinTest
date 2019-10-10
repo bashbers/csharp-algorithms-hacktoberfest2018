@@ -1,0 +1,58 @@
+// This is a simple test made, to test out the Gherkin opensource testing framework, also using the unittest framework. 
+// To actually make these tests run, we needed to install and intergrate the JetBrains tool, ReSharper. 
+
+using Xbehave;
+using Xunit;
+
+namespace TaxCalculator
+{
+    public class Calculator
+    {
+        public double Add(int x, int y) => x + y;
+
+        public double CalculateDeliveryPrice(double price)
+        {
+            double result = 0;
+
+            if (price >= 0 && price < 20)
+            {
+                result = 3;
+            }
+            else if (price >= 20)
+            {
+                result = 2;
+            }
+
+            return result;
+        }
+    }
+
+    public class Class1
+    {
+        // Delivery price is calculated based after VAT is applied
+        [Scenario]
+        public void Scenario1(double price, double taxedPrice, double VAT, Calculator calculator, double deliveryPrice)
+        {
+            "Given price of items is $10"
+                .x(() => price = 10);
+
+            "And VAT is 20%"
+                .x(() => VAT = 0.2);
+
+            "And a calculator"
+                .x(() => calculator = new Calculator());
+
+            "And we calculate taxed price"
+                .x(() => taxedPrice = price + (price * VAT));
+
+            "When taxed price is less than $20"
+                .x(() => Xunit.Assert.InRange(taxedPrice, 0, 19.99));
+
+            "And we calculate delivery price"
+                .x(() => deliveryPrice = calculator.CalculateDeliveryPrice(taxedPrice));
+
+            "Then the result is $3"
+                .x(() => Xunit.Assert.Equal(3, deliveryPrice));
+        }
+    }
+}
