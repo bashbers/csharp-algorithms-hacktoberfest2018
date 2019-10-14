@@ -21,3 +21,6 @@ check some of these resources to help you out to implement basic c# algorithms:
 - [Coin Greedy Algorithm](https://www.csharpstar.com/csharp-coin-change-problem-greedy-algorithm/)
 
 If you think something is missing inside this Readme.md, make a pull request and change it :)
+
+## Add
+- Sudoku in c++
