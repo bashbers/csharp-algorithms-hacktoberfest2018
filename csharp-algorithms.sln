@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2019
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-algorithms", "csharp-algorithms\csharp-algorithms.csproj", "{3511528E-8696-40B8-85AB-97456347A497}"
 EndProject
@@ -32,6 +32,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "knapsackproblem", "knapsackproblem\knapsackproblem.csproj", "{8870FC35-4386-43E5-B5EA-1C764E7ADC54}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bellmanFordAlgorithm", "bellmanFordAlgorithm\bellmanFordAlgorithm.csproj", "{6B79C9EC-0219-44AD-B399-CD4046718E66}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sleepsort", "sleepsort\sleepsort.csproj", "{1E81F8E1-001F-4B31-8D45-83ADD2B7D899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "interpolationsearch", "interpolationsearch\interpolationsearch.csproj", "{BA9B0BBF-EEC1-4CD3-A36A-C8406966560D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jumpsearch", "jumpsearch\jumpsearch.csproj", "{2D39323B-275E-4C07-A31F-C3E66E8F200C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "linearsearch", "linearsearch\linearsearch.csproj", "{C2311581-8514-43E6-9EBF-A02060A6261C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +95,22 @@ Global
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B79C9EC-0219-44AD-B399-CD4046718E66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E81F8E1-001F-4B31-8D45-83ADD2B7D899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E81F8E1-001F-4B31-8D45-83ADD2B7D899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E81F8E1-001F-4B31-8D45-83ADD2B7D899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E81F8E1-001F-4B31-8D45-83ADD2B7D899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA9B0BBF-EEC1-4CD3-A36A-C8406966560D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA9B0BBF-EEC1-4CD3-A36A-C8406966560D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA9B0BBF-EEC1-4CD3-A36A-C8406966560D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA9B0BBF-EEC1-4CD3-A36A-C8406966560D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D39323B-275E-4C07-A31F-C3E66E8F200C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D39323B-275E-4C07-A31F-C3E66E8F200C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D39323B-275E-4C07-A31F-C3E66E8F200C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D39323B-275E-4C07-A31F-C3E66E8F200C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2311581-8514-43E6-9EBF-A02060A6261C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2311581-8514-43E6-9EBF-A02060A6261C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2311581-8514-43E6-9EBF-A02060A6261C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2311581-8514-43E6-9EBF-A02060A6261C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +126,7 @@ Global
 		{8087DFD2-673A-499F-B130-0FAE0F31EADC} = {05BBB622-53C5-4866-869B-B45978502CB5}
 		{8870FC35-4386-43E5-B5EA-1C764E7ADC54} = {05BBB622-53C5-4866-869B-B45978502CB5}
 		{6B79C9EC-0219-44AD-B399-CD4046718E66} = {05BBB622-53C5-4866-869B-B45978502CB5}
+		{1E81F8E1-001F-4B31-8D45-83ADD2B7D899} = {6A9C8607-AA57-4817-B2C8-B8DD5065AC7C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7F2BFC66-A9D6-4C6D-A15A-984F23C11D29}
